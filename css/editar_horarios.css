@@ -1,0 +1,171 @@
+   /* Layout general */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                background: #f9f9f9;
+            }
+
+            /* Contenedor principal */
+            #main-container {
+                display: flex;
+                flex: 1;
+                overflow: hidden;
+            }
+
+            /* Editor horarios a la izquierda */
+            #editor-container {
+                flex: 1;
+                padding: 20px 30px;
+                overflow-y: auto;
+                background: white;
+                box-sizing: border-box;
+            }
+
+            h2 {
+                color: #2c3e50;
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+
+            form {
+                max-width: 900px;
+                margin: 0 auto 30px auto;
+            }
+
+            fieldset {
+                margin-bottom: 25px;
+                padding: 15px 20px;
+                border-radius: 8px;
+                border: 1px solid #ddd;
+                background: #fafafa;
+            }
+
+            legend {
+                font-weight: 700;
+                color: #34495e;
+                font-size: 1.1em;
+                padding: 0 5px;
+            }
+
+            .sesion-row {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 12px;
+                flex-wrap: wrap;
+            }
+
+            .sesion-row input[type="time"] {
+                width: 110px;
+                padding: 6px 8px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                font-size: 14px;
+            }
+
+            .sesion-row label input[type="checkbox"] {
+                margin-right: 5px;
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+
+            .sesion-dropzone {
+                border: 2px dashed #ccc;
+                min-height: 36px;
+                padding: 6px 8px;
+                border-radius: 6px;
+                flex-grow: 1;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 8px;
+                background: #fff;
+                transition: background-color 0.3s, border-color 0.3s;
+                cursor: pointer;
+            }
+
+            .sesion-dropzone.over {
+                border-color: #2980b9;
+                background: #d0e7ff;
+            }
+
+            .profesor-asignado {
+                background: #3092d3ff;
+                color: white;
+                padding: 4px 10px;
+                border-radius: 20px;
+                font-size: 13px;
+                display: inline-flex;
+                align-items: center;
+                user-select: none;
+            }
+
+            .btn-remove-profesor {
+                margin-left: 8px;
+                cursor: pointer;
+                color: #e74c3c;
+                font-weight: bold;
+                user-select: none;
+                font-size: 16px;
+                line-height: 1;
+            }
+
+            button {
+                cursor: pointer;
+                padding: 10px 18px;
+                border: none;
+                background-color: #2980b9;
+                color: white;
+                border-radius: 8px;
+                font-size: 16px;
+                transition: background-color 0.2s;
+                user-select: none;
+                margin-top: 10px;
+            }
+
+            button:hover {
+                background-color: #1c5980;
+            }
+
+            /* Menú profesores a la derecha */
+            #profesores-list {
+                position: sticky;
+                top: 20px;
+                width: 250px;
+                max-height: calc(100vh - 40px);
+                overflow-y: auto;
+                background: #f0f0f0;
+                border-left: 1px solid #ccc;
+                padding: 15px 20px;
+                box-sizing: border-box;
+                font-size: 14px;
+                z-index: 1000;
+                user-select: none;
+            }
+
+            #profesores-list h3 {
+                margin-top: 0;
+                font-size: 18px;
+                margin-bottom: 15px;
+                text-align: center;
+                color: #2c3e50;
+            }
+
+            .profesor-item {
+                background: #3498db;
+                color: white;
+                margin-bottom: 10px;
+                padding: 8px 12px;
+                border-radius: 6px;
+                cursor: grab;
+                user-select: none;
+                transition: background-color 0.3s;
+            }
+
+            .profesor-item:active {
+                cursor: grabbing;
+                background-color: #2a80b9;
+            }
